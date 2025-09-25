@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - DigiEduca</title>
+    <link rel="stylesheet" href="./styles/curriculo_style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre o Projeto</a>
+            <a class="cabecalho__menu__link" href="educacao.html">Recursos Educacionais</a>
+            <a class="cabecalho__menu__link" href="videos.html">Vídeos</a>
+            <a class="cabecalho__menu__link" href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+    <main class="curriculo">
+        <section class="curriculo__conteudo">
+            <h1 class="curriculo__conteudo__titulo">Avaliação e Feedback</h1>
+            <p style="margin-bottom: 30px; font-size: 18px; color: #caf0f8;">
+                Sua opinião é fundamental para melhorarmos o DigiEduca! Avalie nossa plataforma e compartilhe 
+                suas sugestões, críticas ou elogios. Todas as contribuições são valiosas para o desenvolvimento do projeto.
+            </p>
+            <form action="" method="POST" style="max-width: 700px;">
+                <table style="width: 100%; border-spacing: 15px;">
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="nome_feedback">Nome (opcional):</label></th>
+                        <td><input type="text" name="nome_feedback" id="nome_feedback" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="email_feedback">E-mail (opcional):</label></th>
+                        <td><input type="email" name="email_feedback" id="email_feedback" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="categoria">Categoria da Avaliação:</label></th>
+                        <td>
+                            <select name="categoria" id="categoria" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                                <option value="">Selecione...</option>
+                                <option value="workshop">Workshop Presencial</option>
+                                <option value="videos">Vídeos Educacionais</option>
+                                <option value="plataforma">Plataforma/Site</option>
+                                <option value="conteudo">Conteúdo Educacional</option>
+                                <option value="geral">Avaliação Geral</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="nota">Nota de 1 a 10:</label></th>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <input type="range" name="nota" id="nota" min="1" max="10" value="5" required 
+                                       style="flex: 1;" oninput="document.getElementById('nota_valor').textContent = this.value">
+                                <span id="nota_valor" style="font-size: 18px; font-weight: bold; color: #22D4FD; min-width: 30px;">5</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 12px; color: #caf0f8; margin-top: 5px;">
+                                <span>1 - Muito Ruim</span>
+                                <span>10 - Excelente</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="tipo_feedback">Tipo de Feedback:</label></th>
+                        <td>
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <label style="display: flex; align-items: center; gap: 8px; color: #caf0f8;">
+                                    <input type="radio" name="tipo_feedback" value="elogio" style="margin: 0;">
+                                    Elogio
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 8px; color: #caf0f8;">
+                                    <input type="radio" name="tipo_feedback" value="sugestao" style="margin: 0;">
+                                    Sugestão
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 8px; color: #caf0f8;">
+                                    <input type="radio" name="tipo_feedback" value="critica" style="margin: 0;">
+                                    Crítica Construtiva
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 8px; color: #caf0f8;">
+                                    <input type="radio" name="tipo_feedback" value="problema" style="margin: 0;">
+                                    Relato de Problema
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="comentario">Comentário:</label></th>
+                        <td>
+                            <textarea name="comentario" id="comentario" rows="6" required 
+                                      placeholder="Compartilhe sua experiência, sugestões, críticas ou elogios sobre o DigiEduca. Seja específico para nos ajudar a melhorar!" 
+                                      style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; resize: vertical;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="melhorias">O que mais gostaria de ver no projeto:</label></th>
+                        <td>
+                            <textarea name="melhorias" id="melhorias" rows="3" 
+                                      placeholder="Novos temas, funcionalidades, tipos de workshop, etc." 
+                                      style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; resize: vertical;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="recomendaria">Recomendaria o DigiEduca:</label></th>
+                        <td>
+                            <div style="display: flex; gap: 20px;">
+                                <label style="display: flex; align-items: center; gap: 8px; color: #caf0f8;">
+                                    <input type="radio" name="recomendaria" value="sim" style="margin: 0;">
+                                    Sim
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 8px; color: #caf0f8;">
+                                    <input type="radio" name="recomendaria" value="nao" style="margin: 0;">
+                                    Não
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 8px; color: #caf0f8;">
+                                    <input type="radio" name="recomendaria" value="talvez" style="margin: 0;">
+                                    Talvez
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center; padding-top: 20px;">
+                            <button type="submit" style="background-color: #22D4FD; color: #000; padding: 12px 30px; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">
+                                Enviar Feedback
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+

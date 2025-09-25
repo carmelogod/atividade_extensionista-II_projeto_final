@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - DigiEduca</title>
+    <link rel="stylesheet" href="./styles/curriculo_style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre o Projeto</a>
+            <a class="cabecalho__menu__link" href="educacao.html">Recursos Educacionais</a>
+            <a class="cabecalho__menu__link" href="videos.html">Vídeos</a>
+            <a class="cabecalho__menu__link" href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+    <main class="curriculo">
+        <section class="curriculo__conteudo">
+            <h1 class="curriculo__conteudo__titulo">Cadastro no DigiEduca</h1>
+            <p style="margin-bottom: 30px; font-size: 18px; color: #331d4a;">
+                Faça seu cadastro para participar dos workshops e ter acesso aos recursos educacionais. 
+                Suas informações nos ajudam a personalizar o conteúdo e melhorar nossos serviços.
+            </p>
+            <form action="" method="POST" style="max-width: 600px;">
+                <table style="width: 100%; border-spacing: 15px; color: #536c8d;">
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="nome">Nome Completo:</label></th>
+                        <td><input type="text" name="nome" id="nome" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="email">E-mail:</label></th>
+                        <td><input type="email" name="email" id="email" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="telefone">Telefone:</label></th>
+                        <td><input type="tel" name="telefone" id="telefone" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="idade">Idade:</label></th>
+                        <td><input type="number" name="idade" id="idade" min="16" max="100" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="estado_civil">Estado Civil:</label></th>
+                        <td>
+                            <select name="estado_civil" id="estado_civil" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                                <option value="">Selecione...</option>
+                                <option value="solteiro">Solteiro(a)</option>
+                                <option value="casado">Casado(a)</option>
+                                <option value="divorciado">Divorciado(a)</option>
+                                <option value="viuvo">Viúvo(a)</option>
+                                <option value="uniao_estavel">União Estável</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="ocupacao">Ocupação:</label></th>
+                        <td><input type="text" name="ocupacao" id="ocupacao" placeholder="Ex: Estudante, Aposentado, Vendedor..." style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="experiencia_tech">Experiência com Tecnologia:</label></th>
+                        <td>
+                            <select name="experiencia_tech" id="experiencia_tech" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                                <option value="">Selecione...</option>
+                                <option value="nenhuma">Nenhuma experiência</option>
+                                <option value="basica">Básica (uso de celular/WhatsApp)</option>
+                                <option value="intermediaria">Intermediária (redes sociais, e-mail)</option>
+                                <option value="avancada">Avançada (trabalho com computador)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="interesses">Principais Interesses:</label></th>
+                        <td>
+                            <textarea name="interesses" id="interesses" rows="4" placeholder="Conte-nos sobre seus interesses em tecnologia e o que gostaria de aprender..." style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; resize: vertical;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; vertical-align: top; padding-top: 10px;"><label for="como_soube">Como soube do projeto:</label></th>
+                        <td>
+                            <select name="como_soube" id="como_soube" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                                <option value="">Selecione...</option>
+                                <option value="redes_sociais">Redes Sociais</option>
+                                <option value="amigos">Amigos/Familiares</option>
+                                <option value="workshop">Workshop presencial</option>
+                                <option value="internet">Pesquisa na internet</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center; padding-top: 20px;">
+                            <button type="submit" style="background-color: #22D4FD; color: #000; padding: 12px 30px; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">
+                                Realizar Cadastro
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+
